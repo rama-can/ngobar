@@ -25,4 +25,5 @@ Route::group(['prefix' => 'admin',  'middleware' => 'auth'], function()
     //Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
     Route::get('/dashboard', [App\Http\Controllers\Admin\AdminController::class, 'index'])->name('dashboard');
     Route::resource('/user', \Admin\UserController::class);
+    Route::resource('/project', \Admin\ProjectController::class);
 });
